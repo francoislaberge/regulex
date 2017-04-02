@@ -3,6 +3,11 @@
   "version": "0.0.2",
   "description": "JavaScript Regular Expression Parser and Visualizer.",
   "main": "index",
+  "scripts": {
+    "build:js": "node ./node_modules/.bin/r.js -o build-config.js",
+    "build:app": "node ./node_modules/.bin/shrinkray -i docs -o output/regulex.app",
+    "build": "npm run build:js; npm run build:app"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/JexCheng/regulex.git"
@@ -12,11 +17,15 @@
     "RegExp",
     "Regulex"
   ],
-  "dependencies":{
-    "amdefine":"~1.0.0"
+  "dependencies": {
+    "amdefine": "~1.0.0"
   },
   "author": {
     "name": "Jex"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "requirejs": "^2.3.3",
+    "shrinkray": "^1.0.3"
+  }
 }
